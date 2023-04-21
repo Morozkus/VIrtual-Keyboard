@@ -59,7 +59,7 @@ export class KeyBoard {
                 <li data-code="Enter" class="item dev enter">Enter</li>
             </ul>
             <ul class="row third-word-rows">
-                <li data-code="Shift" class="item dev shift">Shift</li>
+                <li data-code="ShiftLeft" class="item dev shift">Shift</li>
                 <li data-code="KeyZ" class="item word"></li>
                 <li data-code="KeyX" class="item word"></li>
                 <li data-code="KeyC" class="item word"></li>
@@ -76,7 +76,7 @@ export class KeyBoard {
                 <li data-code="ControlLeft" class="item dev ctrl">Ctrl</li>
                 <li data-code="MetaLeft" class="item dev win">Win</li>
                 <li data-code="AltLeft" class="item dev alt">Alt</li>
-                <li data-code="Space" class="item dev space"></li>
+                <li data-code="Space" class="item dev space"> </li>
                 <li data-code="AltRight" class="item dev alt">Alt</li>
                 <li data-code="ControlRight" class="item dev ctrl">Ctrl</li>
                 <li data-code="ArrowLeft" class="item arrow arrowLeft">left</li>
