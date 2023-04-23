@@ -2,6 +2,7 @@
 
 export class KeyBoard {
     constructor() {
+        // basic html fragment
         this.structure = `
         <div class="develover-info">
         <ul class="developer-info__list">
@@ -25,10 +26,11 @@ export class KeyBoard {
                 <li data-code="Digit0" class="item">0</li>
                 <li data-code="Minus" class="item">-</li>
                 <li data-code="Equal" class="item">=</li>
-                <li data-code="Backspace" class="item dev delete">del</li>
+                <li data-code="Backspace" class="item dev delete">Backspace</li>
+                <li data-code="Delete" class="item dev">Del</li>
             </ul>
             <ul class="row first-word-rows">
-                <li data-code="Tab" class="item dev tab">Tab</li>
+                <li data-code="Tab" class="item dev tab">   </li>
                 <li data-code="KeyQ" class="item word"></li>
                 <li data-code="KeyW" class="item item_game word"></li>
                 <li data-code="KeyE" class="item word"></li>
@@ -69,7 +71,7 @@ export class KeyBoard {
                 <li data-code="KeyM" class="item word"></li>
                 <li data-code="Comma" class="item word"></li>
                 <li data-code="Period" class="item word"></li>
-                <li data-code="ArrowUp" class="item arrow arrowUp">up</li>
+                <li data-code="ArrowUp" class="item arrow arrowUp">↑</li>
                 <li data-code="Slash" class="item">/</li>
             </ul>
             <ul class="row bottom-rows">
@@ -79,21 +81,24 @@ export class KeyBoard {
                 <li data-code="Space" class="item dev space"> </li>
                 <li data-code="AltRight" class="item dev alt">Alt</li>
                 <li data-code="ControlRight" class="item dev ctrl">Ctrl</li>
-                <li data-code="ArrowLeft" class="item arrow arrowLeft">left</li>
-                <li data-code="ArrowDown" class="item arrow arrowDown">down</li>
-                <li data-code="ArrowRight" class="item arrow arrowRight">right</li>
+                <li data-code="ArrowLeft" class="item arrow arrowLeft">←</li>
+                <li data-code="ArrowDown" class="item arrow arrowDown">↓</li>
+                <li data-code="ArrowRight" class="item arrow arrowRight">→</li>
             </ul>
         </div>
-        <textarea type="text" id="result" placeholder="System == windows | Shift + Alt = change language"></textarea>
+        <textarea type="text" id="result" placeholder="System == windows\nclick/press SHIFT before ALT = change language"></textarea>
         `
+        // fulling for html class word
         this.rows = []
     }
 
+    // inicializition this.structure
     init() {
         document.body.innerHTML += this.structure
         this.rows.push(document.querySelectorAll('.num-rows .word'), document.querySelectorAll('.first-word-rows .word'), document.querySelectorAll('.second-word-rows .word'), document.querySelectorAll('.third-word-rows .word'))
     }
 
+    // fulling word from localeStorage language
     fullWord(language) {
         this.rows[0].forEach((el, i) => {
             el.textContent = language.numRow[i]
