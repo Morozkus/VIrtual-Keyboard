@@ -114,15 +114,15 @@ body {
 }
 
 .keyClickAnimated {
-    background-color: aqua;
+    background-color: lightskyblue;
     transform: scale(0.9);
     transition: transform 0.1s ease;
 }
 
 .shift_active {
-    background-color: aqua;
+    background-color: lightskyblue;
 }
 
 .caps_active {
-    background-color: aqua;
+    background-color: lightskyblue;
 }
