@@ -95,7 +95,6 @@ document.body.addEventListener('keydown', function (e) {
 // Logic keyup
 document.body.addEventListener('keyup', function (e) {
     if (['F1', 'F12', 'F5'].includes(e.code)) return
-    if (e.repeat) return
 
     if (e.code == 'ShiftLeft') {
         document.querySelector('.shift').classList.toggle('shift_active')
