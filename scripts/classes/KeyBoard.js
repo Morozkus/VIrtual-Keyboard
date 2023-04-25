@@ -4,6 +4,7 @@ export class KeyBoard {
     constructor() {
         // basic html fragment
         this.structure = `
+        <textarea type="text" id="result" placeholder="System == windows\nclick/press SHIFT before ALT = change language"></textarea>
         <div class="develover-info">
         <ul class="developer-info__list">
             <li class="developer-info__item developer-info__item_lang">Language: </li>
@@ -86,7 +87,6 @@ export class KeyBoard {
                 <li data-code="ArrowRight" class="item arrow arrowRight">→</li>
             </ul>
         </div>
-        <textarea type="text" id="result" placeholder="System == windows\nclick/press SHIFT before ALT = change language"></textarea>
         `
         // fulling for html class word
         this.rows = []

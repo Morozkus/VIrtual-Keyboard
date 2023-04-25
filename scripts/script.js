@@ -51,6 +51,9 @@ document.body.addEventListener('keydown', function (e) {
 
     // Basic logic cancel
     if (e.code === 'Backspace' || e.code === 'Delete' || e.code === 'Enter') {
+        if (!document.querySelector(`#result:focus`)) {
+            result.focus()
+        }
         return document.querySelector(`.item[data-code="${e.code}"]`).classList.add('keyClickAnimated')
     }
 
@@ -150,7 +153,6 @@ document.body.addEventListener('mousedown', function (e) {
         return result.value += e.target.textContent
 
     }
-
 })
 
 document.body.addEventListener('mouseup', function (e) {
