@@ -45,6 +45,7 @@ function goJson(la) {
 document.body.addEventListener('keydown', function (e) {
     // cancel this button
     if (['F1', 'F12', 'F5'].includes(e.code)) return
+    if (!document.querySelector(`.item[data-code="${e.code}"]`)) return 
 
     // re-pressing cancel
     if (e.repeat) return
@@ -98,6 +99,7 @@ document.body.addEventListener('keydown', function (e) {
 // Logic keyup
 document.body.addEventListener('keyup', function (e) {
     if (['F1', 'F12', 'F5'].includes(e.code)) return
+    if (!document.querySelector(`.item[data-code="${e.code}"]`)) return 
 
     if (e.code == 'ShiftLeft') {
         document.querySelector('.shift').classList.toggle('shift_active')
@@ -118,7 +120,8 @@ document.body.addEventListener('mousedown', function (e) {
 
 
     } else if (e.target.dataset.code === 'Enter') {
-        return result.value += '\n'
+        result.value += '\n'
+        return result.focus()
 
     } else if (e.target.dataset.code === 'Tab') {
 
